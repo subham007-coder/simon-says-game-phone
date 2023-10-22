@@ -1,28 +1,54 @@
 const randomArr = [];
 const userArr = [];
 
-const h2 = document.querySelector("h2");
+let started = false;
+let level = 0;
 
-const startGame = document.querySelector(".startGame")
-// let allBtn = document.querySelectorAll(".btn");
+let btns = ["yellow", "red", "purple", "green"];
+
+let h2 = document.querySelector("h2");
+
+const startGame = document.querySelector(".startGame");
+
+let allBtn = document.querySelectorAll(".btn");
 
 // allBtn.forEach((btns) => {
-//     btns.addEventListener("click", () => {
-//         console.log("btn was click");
-//         h2.innerText = "Game Was Start";
-//         btns.classList.add("userflash")
-//         setTimeout(() => {
-//             btns.classList.remove("userflash")
-//         }, 1000);
-//     })
+//     const random = Math.floor(Math.random() * 3);
+//     console.log(random);
 // })
 
 startGame.addEventListener("click", () => {
+    if (started == false) {
+        console.log("game start");
+        started = true;
+        
+        start();
+    }
     startGame.style.backgroundColor = "red";
     startGame.style.color = "white";
     
     setTimeout(() => {
         startGame.style.backgroundColor = "#fff";
         startGame.style.color = "#000";
-    }, 300);
+        startGame.style.display = "none";
+    }, 200);
 })
+
+
+function start() {
+    level++;
+    h2.innerText = `Level ${level}`;
+
+    let random = Math.floor(Math.random() * 4);
+    let randomcolor = btns[random];
+    let randomBtn = document.querySelector(`.${randomcolor}`)
+
+    btnFlash(randomBtn);
+}
+
+function btnFlash(btn) {
+    btn.classList.add("flash");
+    setTimeout(() => {
+    btn.classList.remove("flash");
+    }, 300);
+}
