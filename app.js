@@ -41,7 +41,7 @@ function start() {
 
     let random = Math.floor(Math.random() * 4);
     let randomcolor = btns[random];
-    let randomBtn = document.querySelector(`.${randomcolor}`)
+    let randomBtn = document.querySelector(`.${randomcolor}`);
 
     console.log(randomBtn);
     console.log(randomcolor);
