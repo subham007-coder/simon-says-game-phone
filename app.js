@@ -10,7 +10,7 @@ let h2 = document.querySelector("h2");
 
 const startGame = document.querySelector(".startGame");
 
-let allBtn = document.querySelectorAll(".btn");
+// let allBtn = document.querySelectorAll(".btn");
 
 // allBtn.forEach((btns) => {
 //     const random = Math.floor(Math.random() * 3);
