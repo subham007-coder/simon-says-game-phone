@@ -30,7 +30,7 @@ startGame.addEventListener("click", () => {
     setTimeout(() => {
         startGame.style.backgroundColor = "#fff";
         startGame.style.color = "#000";
-        startGame.style.display = "none";
+        // startGame.style.display = "none";
     }, 200);
 })
 
@@ -42,6 +42,9 @@ function start() {
     let random = Math.floor(Math.random() * 4);
     let randomcolor = btns[random];
     let randomBtn = document.querySelector(`.${randomcolor}`)
+
+    console.log(randomBtn);
+    console.log(randomcolor);
 
     btnFlash(randomBtn);
 }
