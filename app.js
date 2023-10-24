@@ -10,18 +10,14 @@ let h2 = document.querySelector("h2");
 
 const startGame = document.querySelector(".startGame");
 
-// let allBtn = document.querySelectorAll(".btn");
+let allBtn = document.querySelectorAll(".btn");
 
-// allBtn.forEach((btns) => {
-//     const random = Math.floor(Math.random() * 3);
-//     console.log(random);
-// })
 
 startGame.addEventListener("click", () => {
     if (started == false) {
         console.log("game start");
         started = true;
-        
+
         start();
     }
     startGame.style.backgroundColor = "red";
@@ -47,16 +43,19 @@ function start() {
     console.log(randomcolor);
 
     btnFlash(randomBtn);
-    
-    randomBtn.addEventListener("click", () => {
-        start();
-        
-    })
 }
 
 function btnFlash(btn) {
     btn.classList.add("flash");
     setTimeout(() => {
-    btn.classList.remove("flash");
+        btn.classList.remove("flash");
     }, 300);
 }
+
+function btnPress() {
+    console.log("btn was click");
+}
+
+allBtn.forEach((btns) => {
+    btns.addEventListener("click", btnPress);
+})
