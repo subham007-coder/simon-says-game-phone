@@ -52,8 +52,17 @@ function btnFlash(btn) {
     }, 300);
 };
 
+function userFlash(btn) {
+    btn.classList.add("userflash");
+    setTimeout(() => {
+        btn.classList.remove("userflash");
+    }, 300);
+};
+
 function btnPress() {
-    console.log("btn was click");
+    console.log(this);
+    let btn = this;
+    userFlash(btn);
 };
 
 allBtn.forEach((btns) => {
