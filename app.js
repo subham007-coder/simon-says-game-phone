@@ -47,6 +47,11 @@ function start() {
     console.log(randomcolor);
 
     btnFlash(randomBtn);
+    
+    randomBtn.addEventListener("click", () => {
+        start();
+        
+    })
 }
 
 function btnFlash(btn) {
