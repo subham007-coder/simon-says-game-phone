@@ -54,8 +54,8 @@ function btnFlash(btn) {
 
 function btnPress() {
     console.log("btn was click");
-}
+};
 
 allBtn.forEach((btns) => {
     btns.addEventListener("click", btnPress);
-})
+});
