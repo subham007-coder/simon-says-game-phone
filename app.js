@@ -19,7 +19,7 @@ startGame.addEventListener("click", () => {
         started = true;
 
         start();
-    }
+    };
     startGame.style.backgroundColor = "red";
     startGame.style.color = "white";
     
@@ -28,7 +28,7 @@ startGame.addEventListener("click", () => {
         startGame.style.color = "#000";
         // startGame.style.display = "none";
     }, 200);
-})
+});
 
 
 function start() {
@@ -43,14 +43,14 @@ function start() {
     console.log(randomcolor);
 
     btnFlash(randomBtn);
-}
+};
 
 function btnFlash(btn) {
     btn.classList.add("flash");
     setTimeout(() => {
         btn.classList.remove("flash");
     }, 300);
-}
+};
 
 function btnPress() {
     console.log("btn was click");
