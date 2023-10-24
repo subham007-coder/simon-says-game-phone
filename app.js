@@ -1,14 +1,15 @@
-const randomArr = [];
-const userArr = [];
+let gameArr = [];
+let userArr = [];
 
 let started = false;
 let level = 0;
+let highScore = level;
 
 let btns = ["yellow", "red", "purple", "green"];
 
 let h2 = document.querySelector("h2");
 
-const startGame = document.querySelector(".startGame");
+let startGame = document.querySelector(".startGame");
 
 let allBtn = document.querySelectorAll(".btn");
 
@@ -22,25 +23,29 @@ startGame.addEventListener("click", () => {
     };
     startGame.style.backgroundColor = "red";
     startGame.style.color = "white";
-    
+
     setTimeout(() => {
         startGame.style.backgroundColor = "#fff";
         startGame.style.color = "#000";
-        // startGame.style.display = "none";
     }, 200);
 });
 
 
 function start() {
     level++;
+
     h2.innerText = `Level ${level}`;
+
+    if (level >= highScore) {
+        document.querySelector(".high-score").innerHTML = `Your High Score Was ${highScore}`;
+        highScore++;
+    }
 
     let random = Math.floor(Math.random() * 4);
     let randomcolor = btns[random];
     let randomBtn = document.querySelector(`.${randomcolor}`);
-
-    console.log(randomBtn);
-    console.log(randomcolor);
+    gameArr.push(randomcolor);
+    console.log(gameArr);
 
     btnFlash(randomBtn);
 };
@@ -60,11 +65,36 @@ function userFlash(btn) {
 };
 
 function btnPress() {
-    console.log(this);
     let btn = this;
     userFlash(btn);
+
+    userColor = btn.getAttribute("id");
+    userArr.push(userColor);
+    checkBtns(userArr.length - 1);
 };
 
 allBtn.forEach((btns) => {
     btns.addEventListener("click", btnPress);
 });
+
+function checkBtns(indx) {
+
+    if (userArr[indx] === gameArr[indx]) {
+        if (gameArr.length == userArr.length) {
+            setTimeout(start, 1000);
+            userArr = [];
+        };
+    } else {
+        h2.innerHTML = `Game Over! Your Score Was ${level}. <br> Start Again`;
+
+        startGame.textContent = "Try Again";
+        resetGame();
+    };
+};
+
+function resetGame() {
+    started = false;
+    gameArr = [];
+    userArr = [];
+    level = 0;
+};

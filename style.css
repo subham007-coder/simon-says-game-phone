@@ -12,6 +12,14 @@ body{
     margin: 2.5rem;
 }
 
+h1{
+    font-size: 3vw;
+}
+
+h2{
+    font-size: 2vw;
+}
+
 .btn-container{
     display: flex;
     justify-content: center;
@@ -46,5 +54,5 @@ body{
 }
 
 .userflash{
-    background-color: rgb(129, 253, 129);
+    background-color: rgb(100, 222, 100);
 }
