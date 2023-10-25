@@ -103,7 +103,7 @@ function resetGame() {
 function gameEnd() {
     gameOver.classList.add("gameOver");
 
-    setTimeout( () => {
-    gameOver.classList.remove("gameOver");
+    setTimeout(() => {
+        gameOver.classList.remove("gameOver");
     }, 300);
 }
