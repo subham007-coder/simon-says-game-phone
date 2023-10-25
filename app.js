@@ -106,4 +106,4 @@ function gameEnd() {
     setTimeout(() => {
         gameOver.classList.remove("gameOver");
     }, 300);
-}
+};
