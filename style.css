@@ -1,10 +1,10 @@
-body{
+body {
     text-align: center;
     background-color: rgb(10, 10, 59);
     color: #fff;
 }
 
-.btn{
+.btn {
     height: 20vh;
     width: 20vw;
     border-radius: 20px;
@@ -12,36 +12,36 @@ body{
     margin: 2.5rem;
 }
 
-h1{
+h1 {
     font-size: 3vw;
 }
 
-h2{
+h2 {
     font-size: 2vw;
 }
 
-.btn-container{
+.btn-container {
     display: flex;
     justify-content: center;
 }
 
-.red{
+.red {
     background-color: #d95980;
 }
 
-.green{
+.green {
     background-color: #63aac0;
 }
 
-.yellow{
+.yellow {
     background-color: #f99b45;
 }
 
-.purple{
+.purple {
     background-color: #b541df;
 }
 
-.startGame{
+.startGame {
     padding: 10px;
     font-weight: 600;
     font-style: italic;
@@ -49,10 +49,14 @@ h2{
     border: 0;
 }
 
-.flash{
+.flash {
     background-color: #fff;
 }
 
-.userflash{
+.userflash {
     background-color: rgb(100, 222, 100);
+}
+
+.gameOver {
+    background-color: red;
 }

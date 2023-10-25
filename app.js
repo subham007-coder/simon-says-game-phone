@@ -13,6 +13,7 @@ let startGame = document.querySelector(".startGame");
 
 let allBtn = document.querySelectorAll(".btn");
 
+let gameOver = document.querySelector("body");
 
 startGame.addEventListener("click", () => {
     if (started == false) {
@@ -29,7 +30,6 @@ startGame.addEventListener("click", () => {
         startGame.style.color = "#000";
     }, 200);
 });
-
 
 function start() {
     level++;
@@ -85,10 +85,11 @@ function checkBtns(indx) {
             userArr = [];
         };
     } else {
-        h2.innerHTML = `Game Over! Your Score Was ${level}. <br> Start Again`;
+        h2.innerHTML = `Game Over! Your Score Was ${level}. <br> Try Again`;
 
         startGame.textContent = "Try Again";
         resetGame();
+        gameEnd();
     };
 };
 
@@ -98,3 +99,11 @@ function resetGame() {
     userArr = [];
     level = 0;
 };
+
+function gameEnd() {
+    gameOver.classList.add("gameOver");
+
+    setTimeout( () => {
+    gameOver.classList.remove("gameOver");
+    }, 300);
+}
