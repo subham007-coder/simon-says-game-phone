@@ -1,62 +1,130 @@
 body {
-    text-align: center;
-    background-color: rgb(10, 10, 59);
-    color: #fff;
+  text-align: center;
+  background-color: rgb(10, 10, 59);
+  color: #fff;
 }
 
 .btn {
-    height: 20vh;
-    width: 20vw;
-    border-radius: 20px;
-    border: 5px solid rgb(255, 255, 255);
-    margin: 2.5rem;
+  height: 20vh;
+  width: 20vw;
+  border-radius: 20px;
+  border: 5px solid rgb(255, 255, 255);
+  margin: 2.5rem;
 }
 
 h1 {
-    font-size: 3vw;
+  font-size: 3vw;
 }
 
 h2 {
-    font-size: 2vw;
+  font-size: 2vw;
 }
 
 .btn-container {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .red {
-    background-color: #f14a7c;
+  background-color: #f14a7c;
 }
 
 .green {
-    background-color: #63aac0;
+  background-color: #63aac0;
 }
 
 .yellow {
-    background-color: #f99b45;
+  background-color: #f99b45;
 }
 
 .purple {
-    background-color: #b541df;
+  background-color: #b541df;
 }
 
 .startGame {
-    padding: 10px;
-    font-weight: 600;
-    font-style: italic;
-    border-radius: 5px;
-    border: 0;
+  padding: 10px;
+  font-weight: 600;
+  font-style: italic;
+  border-radius: 5px;
+  border: 0;
 }
 
 .flash {
-    background-color: #fff;
+  background-color: #fff;
 }
 
 .userflash {
-    background-color: rgb(100, 222, 100);
+  background-color: rgb(100, 222, 100);
 }
 
 .gameOver {
-    background-color: red;
+  background-color: red;
+}
+
+a {
+  color: #cef3b2;
+  text-decoration: none;
+  transition: 0.5s;
+}
+a:hover {
+  color: hsl(298, 74%, 81%);
+}
+
+main {
+  display: flex;
+  justify-content: center;
+}
+
+main #box {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: auto;
+  height: 97vh;
+  background-color: #84f18a;
+}
+
+#box .rules-box {
+  display: flex;
+  gap: -20px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+#box .rules-box mark {
+  font-size: 1.2vw;
+  padding: 8px;
+  border-radius: 4px;
+}
+
+.rules-box mark span {
+  animation: lighting2 2s infinite linear;
+}
+.ani-rules {
+  animation: lighting 2s infinite linear;
+}
+
+@keyframes lighting {
+  0% {
+    color: #4b0082;
+  }
+  50% {
+    color: #e65a19;
+  }
+  100% {
+    color: #002d62;
+  }
+}
+
+@keyframes lighting2 {
+  0% {
+    color: #ff0000;
+  }
+  50% {
+    color: #2500f5;
+  }
+  100% {
+    color: #00ff33;
+  }
 }
