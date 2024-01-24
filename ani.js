@@ -8,5 +8,12 @@ gsap.from("mark", {
 gsap.from(".back-game", {
     x: -1400,
     duration: 0.5,
-    delay: 7,
+    delay: 8,
+});
+
+gsap.from(".ani", {
+    x: -1400,
+    duration: 0.5,
+    delay: 0.1,
+    stagger: 1
 });
