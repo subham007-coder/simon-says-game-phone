@@ -27,18 +27,22 @@ h2 {
 
 .red {
   background-color: #f14a7c;
+  cursor: pointer;
 }
 
 .green {
   background-color: #63aac0;
+  cursor: pointer;
 }
 
 .yellow {
   background-color: #f99b45;
+  cursor: pointer;
 }
 
 .purple {
   background-color: #b541df;
+  cursor: pointer;
 }
 
 .startGame {
@@ -47,6 +51,7 @@ h2 {
   font-style: italic;
   border-radius: 5px;
   border: 0;
+  cursor: pointer;
 }
 
 .flash {
