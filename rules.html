@@ -7,6 +7,24 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <textarea name="" id="textInput" cols="30" class="id" rows="10">
+>>First click start game to start the game.
+
+      >>Here are 4 colours.After clicking start game any 1 of these 4 colours will flash white light.
+      
+      >>Now click that 1st colour which flash white light and after that any of these 4 colours will flash white light again then click the 1st one colour first then the second colour which flash white light. After that another colour or the same previous colour will flash white light now click the 1st colour first then the second one which flash white light then the next colour which flash white light. Do this sequencely and then the next colour will be flash white light. Now play continue in this same process sequencely.
+      
+      >>The game will continue sequencely by this process that's how the level will grow.
+      
+      >>One colour can flash white light twice or thrice serially.
+      
+      >>You'll be out/lose if you choose wrong colour.
+      
+      >>The background will be red when you'll choose wrong colour.
+      
+      >>To start the game again you've to click the start game icon.</textarea
+    >
+
     <main>
       <div id="box">
         <h1 class="ani-rules">Rules:~</h1>
@@ -53,11 +71,21 @@
             ><span>>></span>To start the game again you've to click the start
             game icon.</mark
           >
+          <button onclick="convertToSpeech()" class="talk">
+            Convert to Speech
+          </button>
+          <a id="downloadLink" style="display: none">Download Audio</a>
         </div>
         <br />
         <a class="back-game" href="index.html">Back To Game</a>
       </div>
     </main>
+
+    <!-- <script>
+      
+
+    </script> -->
+
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
       integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
