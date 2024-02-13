@@ -1,6 +1,13 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 body {
   text-align: center;
-  height: 93vh;
+  height: 100%;
+  width: 100%;
   background-color: rgb(10, 10, 59);
   color: #fff;
 }
@@ -11,6 +18,13 @@ body {
   border-radius: 20px;
   border: 5px solid rgb(255, 255, 255);
   margin: 2.5rem;
+}
+
+.text{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
 }
 
 h1 {
@@ -88,7 +102,7 @@ h2 {
 main {
   display: flex;
   width: auto;
-  height: 98vh;
+  height: 100vh;
   background-color: #84f18a;
   justify-content: center;
 }
@@ -97,7 +111,10 @@ main #box {
   display: flex;
   align-items: center;
   flex-direction: column;
+}
 
+.click{
+  cursor: pointer;
 }
 
 #box .rules-box {
