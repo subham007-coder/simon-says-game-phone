@@ -1,5 +1,6 @@
 body {
   text-align: center;
+  height: 93vh;
   background-color: rgb(10, 10, 59);
   color: #fff;
 }
@@ -86,6 +87,9 @@ h2 {
 
 main {
   display: flex;
+  width: auto;
+  height: 98vh;
+  background-color: #84f18a;
   justify-content: center;
 }
 
@@ -93,9 +97,7 @@ main #box {
   display: flex;
   align-items: center;
   flex-direction: column;
-  width: auto;
-  height: 100vh;
-  background-color: #84f18a;
+
 }
 
 #box .rules-box {
@@ -103,6 +105,7 @@ main #box {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  gap: 15px;
 }
 #box .rules-box mark {
   font-size: 1.2vw;
